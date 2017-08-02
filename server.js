@@ -27,7 +27,9 @@ app.get("/", function(req, res) {
 app.post("/upload", uploadMiddleware.single("someFile"), function(req, res) {
   var answer = {
     "originalname": req.file.originalname,
-    "byteSize": req.file.size
+    "byteSize": req.file.size,
+    "mimetype": req.file.mimetype,
+    "encoding": req.file.encoding
   };
   res.status(200).json(answer);
 });
