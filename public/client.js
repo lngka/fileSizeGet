@@ -3,7 +3,9 @@ document.querySelector("form").addEventListener("submit", function (event) {
 
   var xhr = new XMLHttpRequest();
   var url = "/upload";
+  
   xhr.open("POST", url);
+  
   xhr.onreadystatechange = function () {
     if (xhr.readyState === XMLHttpRequest.DONE && xhr.status == 200) {
       var answer = JSON.parse(xhr.response);
