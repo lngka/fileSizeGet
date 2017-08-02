@@ -10,9 +10,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Welcome to Glitch!</title>
+    <title>File Metadata Get</title>
     <meta name="description" content="A cool thing made with Glitch">
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
+    <link id="favicon" rel="icon" href="https://cdn.glitch.com/64c112e2-bb36-4740-a575-ab841d0f7d77%2F5a174075-5b55-4fb6-9ade-a35feeed6039%252Ffavicon.ico?1501603745999" type="image/x-icon">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,21 +21,17 @@
   <body>
     <header>
       <h1>
-        A Dream of the Future
+        
       </h1>
     </header>
 
     <main>
       <p class="bold">Oh hi,</p>
-      <p>Tell me your hopes and dreams:</p>
-      <form>
-        <input type="text" maxlength="100" placeholder="Dreams!">
-        <button type="submit">Submit</button>
+      <p> Send me your file</p>
+      <form action="/upload" enctype="multipart/form-data" method="POST">
+        <input type="file" name="someFile" required>
+        <button type="submit" id="sendFile">GO</button>
       </form>
-      <section class="dreams">
-        <ul id="dreams">
-        </ul>
-      </section>
     </main>
 
 
